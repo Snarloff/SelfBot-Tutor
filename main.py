@@ -14,4 +14,9 @@ with open("config.json", "r") as file:
 #Agora, vamos declarar a váriavel principal do nosso Bot.
 
 bot = Bot(command_prefix=config["prefixo"], description="Um simples Bot.")
-#
+
+#Vamos criar um evento de inicialização.
+
+@bot.event
+async def on_ready():
+    print("Bot Iniciado com Sucesso.")
